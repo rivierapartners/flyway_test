@@ -9,6 +9,20 @@
   "deployment": {
     "flywayConfFiles": [
       "./flyway.conf"
+    ],
+    "targetDatabases": [
+      {
+        "connectionProvider": {
+          "type": "UsernamePassword",
+          "url": "jdbc:sqlserver:// sutrox-qa-db.riviapps.com ;authentication=sqlPassword;databaseName=flyway_prod;encrypt=true;trustServerCertificate=true",
+          "username": "admin",
+          "password": {
+            "secretType": "DefaultSecretStore",
+            "name": "Flyway Desktop 06bba1c0-6555-45b3-9306-dfee47433fb4"
+          }
+        },
+        "displayName": "flyway_prod f(rom qa)"
+      }
     ]
   },
   "schemas": []
